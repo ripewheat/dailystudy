@@ -1,1 +1,7 @@
 1.字体大小小于0,代表tmheight
+
+
+
+字库概述
+
+wiki.ubuntu.org.cn/字库概述

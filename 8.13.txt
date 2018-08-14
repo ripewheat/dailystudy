@@ -1,0 +1,8 @@
+gdi的映射模式 
+参考网址：
+1.http://www.cs.binghamton.edu/~reckert/460/mapmodes.htm
+
+
+2.http://wvware.sourceforge.net/caolan/mapmode.html#suggestion
+
+

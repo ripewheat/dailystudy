@@ -1,0 +1,8 @@
+关联远程库
+
+git remote add (远程库名称)  git@github.com:ripewheat
+
+
+推送
+
+git push 远程库名称   master

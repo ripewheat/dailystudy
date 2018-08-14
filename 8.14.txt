@@ -1,0 +1,93 @@
+gdi 映射模式
+ref url:https://github.com/NVIDIA/winex_lgpl/blob/master/winex/dlls/gdi/mapping.c
+
+ 	INT WINAPI SetMapMode( HDC hdc, INT mode )
+	{
+	INT prevMode;
+	INT horzSize, vertSize, horzRes, vertRes;
+	
+	DC * dc = DC_GetDCPtr( hdc );
+	if (!dc) return 0;
+	if (dc->funcs->pSetMapMode)
+	{
+	prevMode = dc->funcs->pSetMapMode( dc, mode );
+	goto done;
+	}
+	
+	TRACE("%04x %d\n", hdc, mode );
+	
+	prevMode = dc->MapMode;
+	horzSize = GetDeviceCaps( hdc, HORZSIZE );
+	vertSize = GetDeviceCaps( hdc, VERTSIZE );
+	horzRes = GetDeviceCaps( hdc, HORZRES );
+	vertRes = GetDeviceCaps( hdc, VERTRES );
+	switch(mode)
+	{
+	case MM_TEXT:
+	dc->wndExtX = 1;
+	dc->wndExtY = 1;
+	dc->vportExtX = 1;
+	dc->vportExtY = 1;
+	break;
+	case MM_LOMETRIC:
+	case MM_ISOTROPIC:
+	dc->wndExtX = horzSize;
+	dc->wndExtY = vertSize;
+	dc->vportExtX = horzRes / 10;
+	dc->vportExtY = vertRes / -10;
+	break;
+	case MM_HIMETRIC:
+	dc->wndExtX = horzSize * 10;
+	dc->wndExtY = vertSize * 10;
+	dc->vportExtX = horzRes / 10;
+	dc->vportExtY = vertRes / -10;
+	break;
+	case MM_LOENGLISH:
+	dc->wndExtX = horzSize;
+	dc->wndExtY = vertSize;
+	dc->vportExtX = 254L * horzRes / 1000;
+	dc->vportExtY = -254L * vertRes / 1000;
+	break;
+	case MM_HIENGLISH:
+	dc->wndExtX = horzSize * 10;
+	dc->wndExtY = vertSize * 10;
+	dc->vportExtX = 254L * horzRes / 1000;
+	dc->vportExtY = -254L * vertRes / 1000;
+	break;
+	case MM_TWIPS:
+	dc->wndExtX = 144L * horzSize / 10;
+	dc->wndExtY = 144L * vertSize / 10;
+	dc->vportExtX = 254L * horzRes / 1000;
+	dc->vportExtY = -254L * vertRes / 1000;
+	break;
+	case MM_ANISOTROPIC:
+	break;
+	default:
+	goto done;
+	}
+	dc->MapMode = mode;
+	DC_UpdateXforms( dc );
+	done:
+	GDI_ReleaseObj( hdc );
+	return prevMode;
+	}
+
+
+ref url:https://www-user.tu-chemnitz.de/~heha/petzold/ch17c.htm
+Keep in mind that the discrepancy between logical inches and real inches occurs only for the display
+Thus, the metrical distance occupied by 96 or 120 pixels on the screen can be said to be a "logical inch."
+
+
+
+ref url:https://github.com/NVIDIA/winex_lgpl/tree/master/winex
+windows 源码
+
+
+
+windows 编程网址：
+http://c.biancheng.net/cpp/u/window/
+ftp://ftp.ora.com/pub/examples/9781572319950/cd_contents/Chap17/
+
+http://alpha.tmit.bme.hu/pub/samples/windows/win_book/chap17/
+
+http://www.tfsattic.com/codearc/

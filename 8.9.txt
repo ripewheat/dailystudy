@@ -1,0 +1,4 @@
+字体工具  Adobe Font Developer Kit for Open Type(AFDKO) http://www.adobe.com/devnet/opentype/afdko.html
+
+
+refer url:http://www.sector12games.com/font-kerning-in-xna-part-2/
