@@ -1,0 +1,5 @@
+cairo coordinates are centered on the pixel boundaries ,not center of the pixel
+
+
+
+
