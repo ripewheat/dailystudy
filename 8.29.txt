@@ -1,0 +1,11 @@
+> A PangoGlyphItem is a pair of a PangoItem and the glyphs resulting from shaping the text corresponding to an item. As an example of the usage of PangoGlyphItem, the results of shaping text with PangoLayout is a list of PangoLayoutLine, each of which contains a list of PangoGlyphItem.
+
+[以上引用网址](https://developer.gnome.org/pango/stable/pango-Glyph-Storage.html#PangoGlyphString-struct)
+
+通过上面可以分析出
+
+PangoLayout---> a list of PangoLayoutLine
+PangoLayoutLine ---> a list of PangoGlyphItem
+PangoGlyphItem ----->alias PangoLayoutRun
+
+由此PangoLayout--->a list of PangoLayoutLine --->a list of PangoLayoutRun

@@ -1,0 +1,5 @@
+- 重新认识字体 tracking 和 kerning 的概念。kerning调整某些字符对。tracking调整选中的字符间距
+调用约定不同，引发的程序崩溃，[分析](http://void-shana.moe/linux/calling-conventions-调用惯例.html)
+
+pango+cairo+opengl(还没有看）
+https://dthompson.us/font-rendering-in-opengl-with-pango-and-cairo.html

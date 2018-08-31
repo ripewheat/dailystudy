@@ -1,0 +1,28 @@
+- 完成四川的电梯项目测试，交货。
+ ---
+ 		使用到了事件，对CreateEvent的ＭanualSet参数有了新的认识，如果为true，那么ＷaitForSingleObject后，他的状态不变，否则状态会变为无信号状态。
+ ---
+ 		同时调整了视频进度获取的方式，达到暂停时，不影响视频进度的获取。
+ 		
+ ---
+ - 今天状态真好，感谢上帝
+ ---
+ 对cairo进行进一步的研究。两个例子，5个网页。
+ 例子已经测试
+ 
+![字体textmetric]( http://phys.cool.coocan.jp/physjpn/cwin/font.gif  "自体textmetric")
+
+---
+
+//请注意，宽度的获取方法因其是否为TrueType而不同
+			ABC abc;
+			if (::GetCharABCWidths(hdc, buf[0], buf[0], &abc))
+			{
+				// TrueTypeのみ有効
+				w = abc.abcA + abc.abcB + abc.abcC;
+			}
+			else if (::GetCharWidth(hdc, buf[0], buf[0], &w))
+			{
+				// TrueType以外
+			}
+			w += tm.tmOverhang;
