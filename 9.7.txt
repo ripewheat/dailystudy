@@ -1,0 +1,13 @@
+- 理解FloodFill的两中填充效果。
+ 		
+ 		//左键时，遇到边框为黑色时，停止填充，右键时，遇到白色像素，一直填充，知道不是白色停止
+ 		if Button = mbLeft then 
+		begin
+			Canvas.Brush.Color := clFuchsia;
+  			ExtFloodFill(canvas.Handle,X,Y,clBlack,FLOODFILLBORDER);
+  		end
+  		else
+  		begin
+  			Canvas.Brush.Color := clBlue;
+  			ExtFloodFill(canvas.Handle,X,Y,clWhite,FLOODFILLSURFACE);
+  		end

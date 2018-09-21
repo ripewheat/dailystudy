@@ -1,0 +1,6 @@
+[wince教学视频](http://staff.ustc.edu.cn/~shizhu/WinCE/Windows%20Embedded%20CE.htm)
+[数字图像处理](http://course.sdu.edu.cn/G2S/Template/View.aspx?courseId=3060&topMenuId=208340&action=view&type=1&name=&menuType=1)
+
+[算法表](http://course.sdu.edu.cn/G2S/Template/View.aspx?courseId=2161&topMenuId=177010&action=view&type=1&name=&menuType=1&curfolid=177016)
+
+[线性代数](http://course.sdu.edu.cn/G2S/Template/View.aspx?courseId=2108&topMenuId=173587&action=view&type=&name=&menuType=1)

@@ -1,0 +1,21 @@
+上午
+
+- 欧阳Q3项目
+
+下午
+
+- http://www.efg2.com/Lab/ImageProcessing/RotateScanline.htm
+- http://www.efg2.com/Lab/Library/Delphi/Graphics/ImageProcessing.htm
+
+
+- delphi 字符串转化
+
+		限制编码直接的转化
+		Iso88591String = type ansistring(28591);
+
+![rotate](RotateAxes.gif) 
+![angle](AngleAddition.gif) 
+![roate1](RotateAxes1.gif) 
+![roate2](RotateAxes2.gif) 
+![roate3](RotateAxes3.gif) 
+![translate](TranslateAndRotateAxes.gif) 

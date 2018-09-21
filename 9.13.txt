@@ -1,0 +1,15 @@
+- 上午
+
+		清空订阅列表 feedmon
+		读取 More Effective C++ 序
+		消化几个网页
+		徐家汇公园天气预报修正----统一删除节目时会使内存中的节目无效
+		
+-上午
+	
+	线性代数的本质 B站
+	
+	以后有时间再去看www.udemy.com/beg-modern-cpp
+	
+	winhttp 测试
+	

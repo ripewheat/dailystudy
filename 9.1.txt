@@ -1,0 +1,1 @@
+今天主要解决win10 更新的问题。[解决办法](https://blessing.studio/fix-windows-update-error-0x800703ed/),主要是由于双系统启动的问题。后来在从grub改为mbr时，把硬盘启动弄坏了，最后通过winpe里面的diskgenic才挽救会系统。
