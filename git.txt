@@ -1,4 +1,4 @@
-关联远程库
+﻿关联远程库
 
 git remote add (远程库名称)  git@github.com:ripewheat
 
@@ -6,3 +6,10 @@ git remote add (远程库名称)  git@github.com:ripewheat
 推送
 
 git push 远程库名称   master
+
+
+ssh -v git@github.com 可以追踪key的位置
+
+
+git status时中文显示不正常，使用以下语句配置：
+git config --global core.quotepath false
