@@ -1,0 +1,24 @@
+1.ConstraintLayout系统学习.
+
+	原由是查找app:layout_constraintDimensionRatio这个的精确解释.
+
+	
+You can explicitly specify the axis to which to apply the ratio: (W | H,) [Ratio]
+ W: Adjust width to fit height
+ H: Adjust height to fit width
+Width match_constraint, height match_constraint
+H, 1: 2: After setting the width according to the constraint, determine the height according to the ratio (case1)
+W, 1: 2: Set the height according to the constraint, then determine the width according to the ratio (case2)
+Width wrap_content, height match_constraint
+H, 1: 2: Set the width to wrap_content, and then determine the height according to the ratio (case3)
+W, 1: 2: Since the width is determined by wrap_content, the 2: 1 ratio is set in reverse (case4)
+
+3.9系统看完三篇文章,对ConstraintLayout有系统的认识,
+一篇是google官网的文档https://developer.android.com/training/constraint-layout/
+一篇是郭洋大牛的解释从属性方面解释
+一篇是从可视化方面解释
+
+
+
+最系统demo是这篇文章,从demo方面解释
+https://beomseok95.tistory.com/305
